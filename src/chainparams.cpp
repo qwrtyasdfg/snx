@@ -403,11 +403,11 @@ public:
         genesis.nVersion = 1;
         genesis.nTime = 1513387642;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 0;
+        genesis.nNonce = 440488;
 
   	hashGenesisBlock = genesis.GetHash();
 
-
+/*
 const int SCRYPT_SCRATCHPAD_SIZE = 131072 + 63;
 
           if (true && genesis.GetHash() != hashGenesisBlock)
@@ -443,12 +443,12 @@ const int SCRYPT_SCRATCHPAD_SIZE = 131072 + 63;
             }
 
 
+*/
 
 
 
 
-
-        assert(hashGenesisBlock == uint256("0x"));
+        assert(hashGenesisBlock == uint256("0xa1bcdb2e5b77609fd078668d863d184d2d99f6817d54da5d186656c1fef11299"));
       
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 85);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 23);
