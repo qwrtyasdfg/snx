@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=snx
+Comment=snx P2P Cryptocurrency
+Comment[fr]=snx, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=snx, eşten eşe kriptografik sanal para birimi
+Exec=snx-qt %u
+Terminal=false
+Type=Application
+Icon=snx128
+MimeType=x-scheme-handler/snx;
+Categories=Office;Finance;

@@ -1,0 +1,26 @@
+# /etc/conf.d/snxd: config file for /etc/init.d/snxd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/snx/snx.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/snxd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/snxd.pid"
+
+# Where to write snxd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/snxd"
+
+# User and group to own snxd process
+#BITCOIND_USER="snx"
+#BITCOIND_GROUP="snx"
+
+# Path to snxd executable
+#BITCOIND_BIN="/usr/bin/snxd"
+
+# Nice value to run snxd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

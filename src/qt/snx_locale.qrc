@@ -1,0 +1,28 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/snx_bg.qm</file>
+        <file alias="ca">locale/snx_ca.qm</file>
+        <file alias="cs">locale/snx_cs.qm</file>
+        <file alias="da">locale/snx_da.qm</file>
+        <file alias="de">locale/snx_de.qm</file>
+        <file alias="en">locale/snx_en.qm</file>
+        <file alias="en_US">locale/snx_en_US.qm</file>
+        <file alias="es">locale/snx_es.qm</file>
+        <file alias="fi">locale/snx_fi.qm</file>
+        <file alias="fr_FR">locale/snx_fr_FR.qm</file>
+        <file alias="it">locale/snx_it.qm</file>
+        <file alias="ja">locale/snx_ja.qm</file>
+        <file alias="ko_KR">locale/snx_ko_KR.qm</file>
+        <file alias="nl">locale/snx_nl.qm</file>
+        <file alias="pl">locale/snx_pl.qm</file>
+        <file alias="pt">locale/snx_pt.qm</file>
+        <file alias="pt_BR">locale/snx_pt_BR.qm</file>
+        <file alias="ro_RO">locale/snx_ro_RO.qm</file>
+        <file alias="ru">locale/snx_ru.qm</file>
+        <file alias="sk">locale/snx_sk.qm</file>
+        <file alias="sv">locale/snx_sv.qm</file>
+        <file alias="uk">locale/snx_uk.qm</file>
+        <file alias="zh_CN">locale/snx_zh_CN.qm</file>
+        <file alias="zh_TW">locale/snx_zh_TW.qm</file>
+    </qresource>
+</RCC>

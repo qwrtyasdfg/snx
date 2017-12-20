@@ -1,0 +1,26 @@
+[Unit]
+Description=snx's distributed currency daemon
+After=network.target
+
+[Service]
+User=snx
+Group=snx
+
+Type=forking
+PIDFile=/var/lib/snxd/snxd.pid
+
+ExecStart=/usr/bin/snxd -daemon -pid=/var/lib/snxd/snxd.pid \
+          -conf=/etc/snx/snx.conf -datadir=/var/lib/snxd
+
+ExecStop=-/usr/bin/snx-cli -conf=/etc/snx/snx.conf \
+         -datadir=/var/lib/snxd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
