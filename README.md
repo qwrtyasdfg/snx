@@ -1,4 +1,4 @@
-<a href="http://uploads.im/gSiuh.png"><img src="http://sn.uploads.im/t/gSiuh.png" border="0" /></a>
+<a href="https://raw.githubusercontent.com/ipedrero/snx/master/src/qt/res/images/splash.png?token=AesF__PYB2BVMWyOHmoMx-pbzcI1zACdks5aaAlqwA%3D%3D" border="0" /></a>
 
 snx Core integration/staging repository
 =====================================
