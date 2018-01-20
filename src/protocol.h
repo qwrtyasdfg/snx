@@ -20,7 +20,7 @@
 
 #define MESSAGE_START_SIZE 4
 
-#define MASTER_NODE_AMOUNT 5000 
+#define MASTER_NODE_AMOUNT 10000 
 
 /** Message header.
  * (4) message start.
