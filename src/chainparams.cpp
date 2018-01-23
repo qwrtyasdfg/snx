@@ -388,7 +388,7 @@ public:
         nMaturity = 10;
         nMasternodeCountDrift = 20;
         nModifierUpdateBlock = 615800;
-        nMaxMoneyOut = 42000000 * COIN;
+        nMaxMoneyOut = 50000000 * COIN;
 
         const char* pszTimestamp = "SNX Core, will create the biggest masternode network";
         CMutableTransaction txNew;
