@@ -373,7 +373,8 @@ public:
         pchMessageStart[1] = 0xaf;
         pchMessageStart[2] = 0x2c;
         pchMessageStart[3] = 0xe9;
-        vAlertPubKey = ParseHex("043c33a22087cdb0183a5861e750ddfb9f7ea27f9ac9b7c2895fb3cdfdde206e1d4282b1f537f674f39913f7e324ab1e777289992f403cd350a6ed98b96654a024");
+        vAlertPubKey = ParseHex("042771005ed2284912858e74f69319817b05cfa5661f6e1e9128667759183d711aef2fa7043014056d038ead3dc8b167e713ac2794dcf89ff8f300eb3de458ab3b");
+
         nDefaultPort = 43101;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // snx starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 210000;
@@ -395,19 +396,19 @@ public:
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CScriptNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
-        txNew.vout[0].nValue = 140 * COIN;
-	txNew.vout[0].scriptPubKey = CScript() << ParseHex("04cbd4f8fa5ae8d6ec1cb63c71d5658b17d752e61fee7677b50e50729f7d91ee08ad4c5b304df95098797cc20cce94816c89b0f8a5bedf90429b685ca2d2b84015") << OP_CHECKSIG;
+        txNew.vout[0].nValue = 10 * COIN;
+	txNew.vout[0].scriptPubKey = CScript() << ParseHex("046901033eeb013d794cbbc51a8b6bc5fff90c86bd35d07e3edac2ed065cc738d6bc51ab0214747a0d774fd32c260e01bf8c5d398e981d53cce04785dd20b32d84") << OP_CHECKSIG;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1513387642;
+        genesis.nTime = 1517076275;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 440488;
+        genesis.nNonce = 0;
 
   	hashGenesisBlock = genesis.GetHash();
 
-/*
+
 const int SCRYPT_SCRATCHPAD_SIZE = 131072 + 63;
 
           if (true && genesis.GetHash() != hashGenesisBlock)
@@ -443,18 +444,18 @@ const int SCRYPT_SCRATCHPAD_SIZE = 131072 + 63;
             }
 
 
-*/
 
 
 
 
-        assert(hashGenesisBlock == uint256("0xa1bcdb2e5b77609fd078668d863d184d2d99f6817d54da5d186656c1fef11299"));
+
+        assert(hashGenesisBlock == uint256("0x"));
       
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 85);
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 23);
-        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 242);
-        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x02)(0x2D)(0x25)(0x33).convert_to_container<std::vector<unsigned char> >();
-        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x02)(0x21)(0x31)(0x2B).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 189);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 13);
+        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 232);
+        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x2D)(0x02)(0x31)(0x33).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x02)(0x21)(0x25)(0x2B).convert_to_container<std::vector<unsigned char> >();
         // 	BIP44 coin type is from https://github.com/satoshilabs/slips/blob/master/slip-0044.md
         base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x00)(0x77).convert_to_container<std::vector<unsigned char> >();
 
@@ -473,9 +474,9 @@ const int SCRYPT_SCRATCHPAD_SIZE = 131072 + 63;
 
         nPoolMaxTransactions = 3;
         strSporkKey =
-"04d8a9f960af2e81ea3ff48a4f0039b55cb1fd04c0d02fbf3d1e6a04810a6f56c636213cff52a1b7170df5500c084a6008848f0ec0eb619b769d1fca4358cf297c";
+"04acfa23dd09e78a17c39ac6a947b016ea750af51c9d9b74eeb2da90c5bd526a271d68820626160ffbe9633e61dda2bdd2c7709a5c4285a1c87bbf2fc8396af498";
         strObfuscationPoolDummyAddress = "bDo738KpZBCbHU4fSHc6TEzFuhP2dbRXdN";
-        nStartMasternodePayments = 1510015830; //Wed, 06 Nov 2017 20:36:16 GMT
+        nStartMasternodePayments = 1517076275; //Saturday, 27 de January de 2018 18:04:35
     }
 
     const Checkpoints::CCheckpointData& Checkpoints() const
