@@ -112,7 +112,9 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
     txNew.vout.resize(1);
     txNew.vout[0].scriptPubKey = scriptPubKeyIn;
     CBlockIndex* prev = chainActive.Tip();
-    if(prev->nHeight <= 300) txNew.vout[0].nValue = 7000 * COIN;
+    if(prev->nHeight <= 9) { txNew.vout[0].nValue = 210000 * COIN;} // Premine 210,000 * 10 = 210,000 SNX 4.2%
+    if (prev->nHeight > 9 && prev->nHeight <= 300) { txNew.vout[0].nValue = 1 * COIN;} // Block 9 to 300 pay 1 to prevent instamine
+    if(prev->nHeight > 300) { txNew.vout[0].nValue = 10 * COIN;} // Block 300 or higher pay 10
     pblock->vtx.push_back(txNew);
     pblocktemplate->vTxFees.push_back(-1);   // updated at end
     pblocktemplate->vTxSigOps.push_back(-1); // updated at end

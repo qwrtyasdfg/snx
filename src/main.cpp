@@ -1614,11 +1614,11 @@ int64_t GetBlockValue(int nHeight)
 {
     int64_t nSubsidy = 0;
 
-
-    if (nHeight == 0) {
-        nSubsidy = 7000 * COIN;
-    } else if (nHeight <= 300 && nHeight > 0) {
-        nSubsidy = 7000 * COIN;
+    if (nHeight <= 9) {
+        nSubsidy = 210000 * COIN;
+    } 
+    else if (nHeight > 9 && nHeight <= 300 ) {
+        nSubsidy = 2 * COIN;
     } else if (nHeight <= 2016 && nHeight > Params().LAST_POW_BLOCK()) {
         nSubsidy = 10 * COIN;
     } else if (nHeight <= 4032 && nHeight >= 2017) {
