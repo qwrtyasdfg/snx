@@ -384,7 +384,7 @@ public:
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // snx: 1 day
-        nTargetSpacing = 1 * 300;  // snx: 5 Min 
+        nTargetSpacing = 1 * 30;  // snx: 5 Min 
         nLastPOWBlock = 300;   //Last Pow Block
         nMaturity = 10;
         nMasternodeCountDrift = 20;
@@ -455,6 +455,11 @@ const int SCRYPT_SCRATCHPAD_SIZE = 131072 + 63;
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x02)(0x21)(0x25)(0x2B).convert_to_container<std::vector<unsigned char> >();
         // 	BIP44 coin type is from https://github.com/satoshilabs/slips/blob/master/slip-0044.md
         base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x00)(0x77).convert_to_container<std::vector<unsigned char> >();
+
+/	vSeeds.push_back(CDNSSeedData("45.76.13.31", "45.76.13.31"));     // United States Seed
+        vSeeds.push_back(CDNSSeedData("45.77.143.52", "45.77.143.52"));    // Germany Seed
+        vSeeds.push_back(CDNSSeedData("199.247.9.247", "199.247.9.247"));         // France Seed
+        vSeeds.push_back(CDNSSeedData("45.76.202.59", "45.76.202.59")); // Japan Seed
 
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
 
