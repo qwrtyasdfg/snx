@@ -13,7 +13,7 @@
  * for both snxd and snx-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
-const std::string CLIENT_NAME("snx Core");
+const std::string CLIENT_NAME("SNX Core");
 
 /**
  * Client version number
