@@ -56,7 +56,7 @@ More information at [snxproject.com](http://www.snxproject.com)
 </table>
 
 
+### Block Reward Payment Graphic
 
-
-
+<a href="http://www.freeimagehosting.net/commercial-photography/"><img src="https://i.imgur.com/6CoMO3N.jpg" alt="Commercial Photography"></a>
 
