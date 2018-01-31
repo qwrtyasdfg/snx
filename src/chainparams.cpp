@@ -384,7 +384,7 @@ public:
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // snx: 1 day
-        nTargetSpacing = 1 * 30;  // snx: 5 Min 
+        nTargetSpacing = 1 * 300;  // snx: 5 Min 
         nLastPOWBlock = 300;   //Last Pow Block
         nMaturity = 10;
         nMasternodeCountDrift = 20;
