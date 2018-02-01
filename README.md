@@ -52,7 +52,8 @@ More information at [snxproject.com](http://www.snxproject.com)
 ### Slack
 <table>
 <tr><td>Twitter</td><td>https://twitter.com/#####</td></tr>
-<tr><td>Discord Chat</td><td><a href="https://discord.gg/####">Discord chat</a></td></tr>
+<tr><td>Discord Chat</td><td><a href="https://discord.gg/DfZkpmX">Discord chat</a></td></tr>
+<tr><td>Discord Admin</td><td>snoxdj</a></td></tr>
 </table>
 
 
