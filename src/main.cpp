@@ -1612,6 +1612,7 @@ double ConvertBitsToDouble(unsigned int nBits)
 
 int64_t GetBlockValue(int nHeight)
 {
+	
     int64_t nSubsidy = 0;
 
     if (nHeight <= 9) {
@@ -1619,7 +1620,7 @@ int64_t GetBlockValue(int nHeight)
     } 
     else if (nHeight > 9 && nHeight <= 300 ) {
         nSubsidy = 2 * COIN;
-    } else if (nHeight <= 2016 && nHeight > Params().LAST_POW_BLOCK()) {
+    } else if (nHeight <= 2016 && nHeight >= 301 ) {
         nSubsidy = 10 * COIN;
     } else if (nHeight <= 4032 && nHeight >= 2017) {
         nSubsidy = 12 * COIN;
@@ -1683,7 +1684,7 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
 {
     int64_t ret = 0;
 
-    if (nHeight <= 300) {
+    if (nHeight <= 8065) {
         ret = blockValue / 2;
     } else if (nHeight > Params().LAST_POW_BLOCK()) {
         int64_t nMoneySupply = chainActive.Tip()->nMoneySupply;
