@@ -422,7 +422,6 @@ public:
         vSeeds.push_back(CDNSSeedData("45.77.143.52", "45.77.143.52"));    // Germany Seed
         vSeeds.push_back(CDNSSeedData("199.247.9.247", "199.247.9.247"));         // France Seed
         vSeeds.push_back(CDNSSeedData("45.76.202.59", "45.76.202.59")); // Japan Seed
-        vSeeds.push_back(CDNSSeedData("108.61.210.94", "108.61.210.94")); // Japan Seed
 	
         fRequireRPCPassword = true;
         fMiningRequiresPeers = true;
