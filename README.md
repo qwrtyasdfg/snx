@@ -33,11 +33,13 @@ More information at [snxproject.com](http://www.snxproject.com)
 
 ### PoS/PoW Block Details
 <table>
-<tr><td>Proof Of Work Phase</td><td>1-300 Blocks.</td></tr>
-<tr><td>Proof of Stake Phase</td><td>301-infinite</td></tr>
+<tr><td>Proof Of Work Phase</td><td>1-8065 Blocks.</td></tr>
+<tr><td>Proof of Stake Phase</td><td>8065-infinite</td></tr>
 </table>
 
-* Proof of Work 1 blocks to 300 , used to Set Up Network. 301 - Infinite Blocks PoS only.
+* Proof of Work 1 blocks to 300 will pay 1 to Prevent Instamine , used to Set Up Network.
+** Proof of Work  301 to 8065 will pay 10 SNX incrementing 2 SNX each Week.
+*** Proof of Stake will start from block 8066 to Infinite
 
 ### Staking Methods
 <table>
