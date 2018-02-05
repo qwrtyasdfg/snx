@@ -406,46 +406,7 @@ public:
         genesis.nBits = 0x1e0ffff0;
         genesis.nNonce = 1517140;
 
-
-
-/*
-const int SCRYPT_SCRATCHPAD_SIZE = 131072 + 63;
-
-          if (true && genesis.GetHash() != hashGenesisBlock)
-        //if(false)
-        {
-            printf("Searching for genesis block...\n");
-            // This will figure out a valid hash and Nonce if you're
-            // creating a different genesis block:
-            uint256 hashTarget = CBigNum().SetCompact(genesis.nBits).getuint256();
-            uint256 thash;
-            char scratchpad[SCRYPT_SCRATCHPAD_SIZE];
-
-            while(true)
-            {
-                scrypt_1024_1_1_256_sp_generic(BEGIN(genesis.nVersion), BEGIN(thash), scratchpad);
-                if (thash <= hashTarget)
-                    break;
-                if ((genesis.nNonce & 0xFFF) == 0)
-                {
-                    printf("nonce %08X: hash = %s (target = %s)\n", genesis.nNonce, thash.ToString().c_str(), hashTarget.ToString().c_str());
-                }
-                ++genesis.nNonce;
-                if (genesis.nNonce == 0)
-                {
-                    printf("NONCE WRAPPED, incrementing time\n");
-                    ++genesis.nTime;
-                }
-            }
-            printf("block.nTime = %u \n", genesis.nTime);
-            printf("block.nNonce = %u \n", genesis.nNonce);
-            printf("block.GetHash = %s\n", genesis.GetHash().ToString().c_str());
-
-            }
-
-*/
-
-  	hashGenesisBlock = genesis.GetHash();
+  	    hashGenesisBlock = genesis.GetHash();
         assert(hashGenesisBlock == uint256("0x9a625e344ce64bbfb0f180a2fe74786f59c31995a58ebe45618e2a1a48343bca"));
       
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 189);
