@@ -116,30 +116,7 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
     if (prev->nHeight > 9 && prev->nHeight <= 300) { txNew.vout[0].nValue = 1 * COIN;} // Block 9 to 300 pay 1 to prevent instamine
     if (prev->nHeight > 300 && prev->nHeight <= 2016) { txNew.vout[0].nValue = 10 * COIN;}  // weekly Incrmental Rewards Start From Here.
     if (prev->nHeight > 2016 && prev->nHeight <= 4032) { txNew.vout[0].nValue = 12 * COIN;}
-    if (prev->nHeight > 4032 && prev->nHeight <= 6048) { txNew.vout[0].nValue = 14 * COIN;} 
-    if (prev->nHeight > 6048 && prev->nHeight <= 8064) { txNew.vout[0].nValue = 16 * COIN;} 
-	if (prev->nHeight > 8064 && prev->nHeight <= 10080) { txNew.vout[0].nValue = 18 * COIN;} 
-	if (prev->nHeight > 10080 && prev->nHeight <= 12096) { txNew.vout[0].nValue = 20 * COIN;} 
-	if (prev->nHeight > 12096 && prev->nHeight <= 14112) { txNew.vout[0].nValue = 22 * COIN;} 
-	if (prev->nHeight > 14112 && prev->nHeight <= 16128) { txNew.vout[0].nValue = 24 * COIN;} 
-	if (prev->nHeight > 16128 && prev->nHeight <= 18144) { txNew.vout[0].nValue = 26 * COIN;} 
-	if (prev->nHeight > 18144 && prev->nHeight <= 20160) { txNew.vout[0].nValue = 28 * COIN;} 
-	if (prev->nHeight > 20160 && prev->nHeight <= 22176) { txNew.vout[0].nValue = 30 * COIN;} 
-	if (prev->nHeight > 22176 && prev->nHeight <= 24192) { txNew.vout[0].nValue = 32 * COIN;} 
-	if (prev->nHeight > 24192 && prev->nHeight <= 26208) { txNew.vout[0].nValue = 34 * COIN;} 
-	if (prev->nHeight > 26208 && prev->nHeight <= 28224) { txNew.vout[0].nValue = 36 * COIN;} 
-	if (prev->nHeight > 28225 && prev->nHeight <= 30240) { txNew.vout[0].nValue = 38 * COIN;} 
-	if (prev->nHeight > 30240 && prev->nHeight <= 32256) { txNew.vout[0].nValue = 40 * COIN;} 
-	if (prev->nHeight > 32256 && prev->nHeight <= 34272) { txNew.vout[0].nValue = 42 * COIN;} 
-	if (prev->nHeight > 34272 && prev->nHeight <= 36288) { txNew.vout[0].nValue = 44 * COIN;} 
-	if (prev->nHeight > 36288 && prev->nHeight <= 38304) { txNew.vout[0].nValue = 46 * COIN;} 
-	if (prev->nHeight > 38304 && prev->nHeight <= 40320) { txNew.vout[0].nValue = 48 * COIN;} 
-	if (prev->nHeight > 40320 && prev->nHeight <= 42336) { txNew.vout[0].nValue = 50 * COIN;} 
-	if (prev->nHeight > 42336 && prev->nHeight <= 44352) { txNew.vout[0].nValue = 52 * COIN;} 
-	if (prev->nHeight > 44352 && prev->nHeight <= 46369) { txNew.vout[0].nValue = 54 * COIN;} 
-    if (prev->nHeight > 46369 && prev->nHeight <= 48385) { txNew.vout[0].nValue = 56 * COIN;} 
-	if (prev->nHeight > 48385 && prev->nHeight <= 50401) { txNew.vout[0].nValue = 58 * COIN;} 
-    if (prev->nHeight > 50401) { txNew.vout[0].nValue = 60 * COIN;}   // Weekly Incremental Rewards Ends Here
+    if (prev->nHeight >= 4033) { txNew.vout[0].nValue = 60 * COIN;}   // Weekly Incremental Rewards Ends Here
     pblock->vtx.push_back(txNew);
     pblocktemplate->vTxFees.push_back(-1);   // updated at end
     pblocktemplate->vTxSigOps.push_back(-1); // updated at end
